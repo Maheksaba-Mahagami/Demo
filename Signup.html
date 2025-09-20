@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BagHub - Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f7f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #E07A5F;
+      color: white;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+    .logo span {
+      color: #ffe4c4;
+    }
+    nav a {
+      margin-left: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      border: 2px solid #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: white;
+      color: #E07A5F;
+    }
+
+    /* Signup Form */
+    .signup-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .signup-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .signup-box h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    .signup-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .signup-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #E07A5F;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+    .signup-box button:hover {
+      background-color: #d86a4e;
+    }
+    .signup-box p {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .signup-box a {
+      color: #E07A5F;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .signup-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+      border-top: 1px solid #eee;
+    }
+    footer span {
+      color: #E07A5F;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Bag<span>Hub</span></div>
+    <nav>
+      <a href="Dashboard.html">Home</a>
+      <a href="Login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- Signup Form -->
+  <div class="signup-container">
+    <div class="signup-box">
+      <h2>Create Account</h2>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="Login.html">Login here</a></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 <span>BagHub</span>. All rights reserved.
+  </footer>
+
+</body>
+</html>

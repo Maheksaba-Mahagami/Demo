@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BagHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style id="app-style">
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f7f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #E07A5F;
+            color: white;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo span {
+            color: #ffe4c4;
+        }
+
+        nav a {
+            margin-left: 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            border: 2px solid #fff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #E07A5F;
+        }
+
+        .variety {
+            font-size: 1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .variety i {
+            color: #ffe4c4;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            max-height: 100vh;
+        }
+
+        .bag-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .bag-image {
+            width: 45%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .bag-image:hover {
+            transform: scale(1.03);
+        }
+
+        /* Text Overlay */
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(248, 238, 238, 0.192);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 600px;
+            z-index: 10;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .text-overlay h1 {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .text-overlay p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .btn {
+            background-color: #E07A5F;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #d86a4e;
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: #ffffff;
+            padding: 2rem 1rem;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+            color: #333;
+        }
+
+        .footer-content-wrapper {
+            max-width: 960px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        .footer-brand-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .footer-link {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #E07A5F;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            background-color: #E07A5F;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .bag-image {
+                width: 100%;
+                height: 300px;
+            }
+            .text-overlay {
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+            .text-overlay h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bag<span>Hub</span></div>
+        <div class="variety">
+            <i class="fas fa-shopping-bag"></i> Bags & Variety
+        </div>
+        <nav>
+            <a href="Dashboard.html">Home</a>
+            <a href="Login.html">Login</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="bag-container">
+            <img src="whitebag.jpeg" alt="Brown Leather Bag" class="bag-image">
+            <img src="bag.jpeg" alt="Red Leather Bag" class="bag-image">
+        </div>
+
+        <div class="text-overlay">
+            <h1>Discover Stylish Bags</h1>
+            <p>Find the perfect bag for every occasion — from casual to luxury collections.</p>
+            <a href="Variety.html" class="btn">Shop Now</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content-wrapper">
+            <div>
+                <h3 class="footer-brand-title">Bag<span style="color:#E07A5F;">Hub</span></h3>
+                <p>© 2025 BagHub. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="About.html" class="footer-link">About</a> | 
+                <a href="Privacy.html" class="footer-link">Privacy</a> | 
+                <a href="Contact.html" class="footer-link">Contact</a>
+            </div>
+            <div>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

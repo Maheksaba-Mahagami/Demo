@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BagHub - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f7f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #E07A5F;
+      color: white;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+    .logo span {
+      color: #ffe4c4;
+    }
+    nav a {
+      margin-left: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      border: 2px solid #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: white;
+      color: #E07A5F;
+    }
+
+    /* Login form */
+    .login-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .login-box {
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .login-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    .form-group {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .btn {
+      background-color: #E07A5F;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background-color: #d86a4e;
+    }
+    .extra-links {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .extra-links a {
+      color: #E07A5F;
+      text-decoration: none;
+    }
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+      border-top: 1px solid #eee;
+    }
+    footer span {
+      color: #E07A5F;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Bag<span>Hub</span></div>
+    
+  </header>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login to BagHub</h2>
+      <form action="dashboard.html" method="POST">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="extra-links">
+          <p><a href="#">Forgot Password?</a></p>
+          <p>Don't have an account? <a href="Signup.html">Sign Up</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <span>BagHub</span>. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BagHub - Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f7f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #E07A5F;
+      color: white;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+    .logo span {
+      color: #ffe4c4;
+    }
+    nav a {
+      margin-left: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      border: 2px solid #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: white;
+      color: #E07A5F;
+    }
+
+    /* Products grid */
+    .products {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #555;
+    }
+    .card button {
+      width: 100%;
+      padding: 10px;
+      background: #E07A5F;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .card button:hover {
+      background: #d86a4e;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffffff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+      border-top: 1px solid #eee;
+    }
+    footer span {
+      color: #E07A5F;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Bag<span>Hub</span></div>
+        <nav>
+            <a href="Dashboard.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/5c/f3/0f/5cf30fb9df423c821904dae855894f8f.jpg" height="250" width="220" alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1200</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/f3/5b/04/f35b04c8efba400447db883cbda97ae9.jpg" height="250" width="220" alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/bd/6e/7f/bd6e7f42b9782e4379d12d97cbfa2a9b.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src=" https://i.pinimg.com/1200x/7e/9d/0c/7e9d0c93a8d40cf288e82a56c9a06eaa.jpg "  height="250" width="220" alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+     <div class="card">
+      <img src="https://i.pinimg.com/1200x/bf/4b/e9/bf4be9432333f9fbe28795230502fcbd.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+     <div class="card">
+      <img src="https://i.pinimg.com/1200x/d8/67/ba/d867bade12fee7e3d9033d00d7555fba.jpg" height="250" width="220" alt="Side Bag">
+      <h3>Side Bag</h3>
+      <p>₹1500</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://biobeautify.com/cdn/shop/files/Clarabelle-Pearl-Clutch-Bag-White.jpg?v=1735811526&width=1346" height="250" width="220" alt="Gym Bag">
+      <h3>Gym Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/aa/94/dc/aa94dcc8cd4c6bada342dad7081c7e24.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://biobeautify.com/cdn/shop/files/Madyson-Rhinestones-Clutch-Bag-Green.jpg?v=1735811399&width=1346" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/20/9c/d5/209cd514e07e2ad774c9e4da63ff3c2f.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/c6/57/3b/c6573b9eff92b894dde91bac5716cac2.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/04/cf/d2/04cfd2fe1fb35f90ee161de225e245b6.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/b8/88/80/b88880e0666aa364360bb9761051f5c6.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://img.fantaskycdn.com/334773c4787e7e91b75b80f6370360f4_2056x.jpeg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/cb/0c/18/cb0c18dd6d6ff855002243fb1027c053.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/32/81/a2/3281a2308a63f1e7aa6366bfe447966f.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/55/86/f3/5586f351417dbc2422185e32a384d93f.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/c8/56/df/c856df45d8dd7e6b962292373dde63a7.jpg" height="250" width="220"  alt="School Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/bb/3d/3b/bb3d3bdeafd3f7cc8df0879a13f245e0.jpg" height="250" width="220"  alt="School Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/76/52/0c/76520c2297030f81c10082d97aa9408d.jpg" height="250" width="220"  alt="Hand Bag">
+      <h3>Hand Bag</h3>
+      <p>₹1800</p>
+      <button>Add to Cart</button>  
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 <span>BagHub</span>. All rights reserved.
+  </footer>
+
+</body>
+</html>
